@@ -1,0 +1,18 @@
+.flex{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.nextBtn{
+    width: 46px;
+    height: 21px;
+    font-weight: bold;
+}
+.nextBtn-ctn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
