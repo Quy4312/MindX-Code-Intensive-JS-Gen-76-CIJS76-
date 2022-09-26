@@ -11,21 +11,22 @@ function App() {
     { id: "5", check: false, text: "Doing Exercises" },
   ]);
 
-  const removeTask = () => {
-    // let clonelist = [...list];
-    // clonelist.splice(2, 1);
-    const newlist = list.filter((item) => item.text != "Jogging");
+  const removeTask = (id) => {
+    const newlist = list.filter((item) => item.id != id);
     setList(newlist);
+  };
+  const doTask = (id) => {
+    const newList = list.map((item) => {
+      if (item.id === id) return { ...item, check: !item.check };
+      return item;
+    });
+    setList(newList);
   };
   return (
     <div className="App">
       <Search />
-      <Button
-        content={"Remove task: Jogging"}
-        onClick={() => removeTask("Jogging")}
-      />
       <div className="List">
-        <List list={list} />
+        <List list={list} removeTask={removeTask} doTask={doTask} />
       </div>
       <Footer />
     </div>
@@ -35,28 +36,39 @@ function Search() {
   return <input className="search" placeholder="Enter your task here" />;
 }
 function List(props) {
-  const { list } = props;
+  const { list, removeTask, doTask } = props;
   return (
     <div>
       {list.map((item) => (
-        <TodoItem key={item.id} check={item.check} text={item.text} />
+        <TodoItem
+          key={item.id}
+          id={item.id}
+          check={item.check}
+          text={item.text}
+          removeTask={removeTask}
+          doTask={doTask}
+        />
       ))}
     </div>
   );
-
-  // return (<div className='ListItem'>
-  //   <div className='checkbox'></div>
-  //   <label >{props.text}</label>
-  //   </div>)
 }
 function TodoItem(props) {
   return (
     <div className="ListItem">
       <div className="checkbox"></div>
-      <label>{props.text}</label>
+      <div
+        className={`${props.check ? "true" : ""}`}
+        onClick={() => props.doTask(props.id)}
+      >
+        {props.text}
+      </div>
+      <div>
+        <button onClick={() => props.removeTask(props.id)}>remove</button>
+      </div>
     </div>
   );
 }
+
 function Footer() {
   return (
     <div className="footer">

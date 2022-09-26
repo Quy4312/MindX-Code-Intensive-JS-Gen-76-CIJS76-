@@ -1,0 +1,9 @@
+.barchart-ctn{
+    height: 198px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #E1CAE4;
+    border-radius: 13px;
+    display: flex;
+    justify-content: space-around;
+}

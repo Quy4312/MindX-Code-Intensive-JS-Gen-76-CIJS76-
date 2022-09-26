@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+.text{
+  margin: 30px 0;
+}
+.backtotop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+}

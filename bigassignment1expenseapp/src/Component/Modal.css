@@ -1,0 +1,61 @@
+.modal-ctn{
+    width: 799px;
+    height: 303px;
+    background-color: #897BDA;
+    position: absolute;
+    top: -1px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    row-gap: 50px;
+
+}
+.modal-ctn div:first-child{
+    margin-top: 30px;
+}
+.modal-item{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-left: 40px;
+    column-gap: 100px;
+    font-weight: bold;
+    color: white;
+    font-size: 19px;
+}
+.modal-item input{
+    width: 70%;
+    height: 30px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+}
+.add-btn{
+    position: absolute;
+    top: 248px;
+    right: 127px;
+    width: 50px;
+    height: 25px;
+    border-radius: 9px;
+    border: none;
+    background-color: #862796;
+    box-shadow: -1px 1px  #302b2b;
+}
+.cancel-btn{
+    position: absolute;
+    top: 248px;
+    right: 32px;
+    width: 72px;
+    height: 25px;
+    border-radius: 9px;
+    border: none;
+    
+    box-shadow: -1px 1px  #302b2b;
+}
+.add-btn:hover,
+.cancel-btn:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}

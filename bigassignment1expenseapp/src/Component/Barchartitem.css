@@ -1,0 +1,22 @@
+.barchartitem-ctn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+.barchartitem-progress{
+    height: 139px;
+    width: 21px;
+    background-color: #BAA5ED;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.progress-bar{
+    height: 20%;
+    width: 21px;
+    background-color: #3D15A9;
+    border-radius: 10px;
+    border: none;
+}

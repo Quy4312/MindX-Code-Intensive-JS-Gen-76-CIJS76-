@@ -1,0 +1,26 @@
+.add-ctn{
+    width: 799px;
+    height: 100px;
+    background-color: rgb(136, 97, 172);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.add-content{
+    width:227px ;
+    height: 44px;
+    background-color: #862796;
+    color: #fff;
+    font-weight: bold;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.add-content:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
