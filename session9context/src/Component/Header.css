@@ -1,0 +1,6 @@
+.header-ctn{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc;
+    padding: 10px 10px;
+}
